@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Scraper Dashboard</title>
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📊 Profile Scraper Dashboard</h1>
+      <div class="stats">
+        <div class="stat-card">
+          <span class="stat-label">Total Profiles</span>
+          <span class="stat-value" id="totalProfiles">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">LinkedIn</span>
+          <span class="stat-value" id="linkedinCount">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Instagram</span>
+          <span class="stat-value" id="instagramCount">0</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="linkedin">LinkedIn</button>
+      <button class="filter-btn" data-filter="instagram">Instagram</button>
+      <button class="refresh-btn" onclick="loadProfiles()">🔄 Refresh</button>
+    </div>
+
+    <div id="profilesContainer" class="profiles-grid">
+      <div class="loading">Loading profiles...</div>
+    </div>
+  </div>
+
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>
